@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAE6"
+    tools:context="com.yu.daekwang.daekwang_yu.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/top_visual_2" />
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/navi_01"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/spinner11"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+                <Spinner
+                    android:id="@+id/spnYear"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_drop_down"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:text="년도" />
+
+            <Button
+                android:id="@+id/btnMinister"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_round_boder"
+                android:onClick="btnGoMinisterInfo"
+                android:text="유강신 목사님소개" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_round_boder"
+                android:onClick="btnGoHome"
+                android:text="대광교회 홈" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inner02"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.87"
+            android:layout_marginTop="5dp"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="※ 설교 제목 선택시 YouTube 영상 재생 (데이터 소모 주의)"/>
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tableLayout1" >
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C3C3C3"
+                            android:text="제목"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C3C3C3"
+                            android:text="기간"
+                            android:textAlignment="center"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C8BFE7"
+                            android:text="테스트"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="2018-01-03"
+                            android:textAlignment="center"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C8BFE7"
+                            android:text="테스트"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="2018-01-01"
+                            android:textAlignment="center"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C8BFE7"
+                            android:text="테스트"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="2018-01-02"
+                            android:textAlignment="center"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C8BFE7"
+                            android:text="테스트"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="2018-01-03"
+                            android:textAlignment="center"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C3C3C3"
+                            android:text="제목"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="#C3C3C3"
+                            android:text="기간"
+                            android:textAlignment="center"/>
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.08"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="btnGoDkInfo"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/logo_sub_2_1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="btnGoTel"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/logo_sub_4" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
